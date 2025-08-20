@@ -1,0 +1,23 @@
+{
+  "name": "decent-credit-score",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "postinstall": "cd client && (npm ci || npm install)",
+    "dev": "npm run dev:server",
+    "dev:server": "nodemon server/index.js",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "lint": "echo 'no lint configured'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
